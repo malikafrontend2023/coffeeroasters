@@ -263,6 +263,10 @@ img {
 
 
 /* OUR-COLLECTION */
+.our-collection {
+  margin-bottom: 20px;
+}
+
 .our-collection-inner {
   padding: 50px 143px;
   background-color: var(--light-bg);
@@ -330,6 +334,74 @@ img {
   margin-bottom: 10px;
 }
 
+/* INDEX-FEATURES */
+.index-features {
+  margin-bottom: 30px;
+}
+
+.index-features-inner {
+  padding: 50px 30px;
+  background-image: url(../img/index-features-bg.jpg);
+  background-size: 100% 700px;
+  background-repeat: no-repeat;
+}
+
+.index-features-heading {
+  color: #fff;
+  text-align: center;
+  font-size: 50px;
+  line-height: normal;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.index-features-info {
+  margin: 0 auto 80px auto;
+  max-width: 580px;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.index-features-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-left: -20px;
+}
+
+.index-features-item {
+  width: calc(100% / 3 - 20px);
+  margin-left: 20px;
+  margin-bottom: 30px;
+}
+
+.index-features-img {
+  width: 433px;
+  height: 500px;
+  object-fit: cover;
+  margin-bottom: 28px;
+}
+
+.index-features-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 30px;
+  line-height: normal;
+  font-weight: 500;
+}
+
+.index-features-text {
+  margin: 0;
+  font-size: 18px;
+}
+
+
 
 /* RETINA-BG */
 @media
@@ -345,5 +417,9 @@ only screen and (                min-resolution: 2dppx) {
 
   .our-collection-inner {
     background-image: url(../img/our-collection-bg@2x.jpg);
+  }
+
+  .index-features-inner {
+    background-image: url(../img/index-features-bg@2x.jpg);
   }
 }
