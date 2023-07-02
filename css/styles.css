@@ -1,4 +1,4 @@
-/* CUSTOM PROPS */
+/* CUSTOM-PROPS */
 :root {
   --text-color: #333;
   --accent-color-green: #0a775f;
@@ -8,6 +8,7 @@
   --accent-color-light-brown-80: rgb(201, 155, 103, 0.8);
   --accent-color-light-brown-60: rgb(201, 155, 103, 0.6);
   --light-brown: #f3d7b7;
+  --light-bg: #f8f8f2;
   --outline-color: var(--accent-color-green);
 }
 
@@ -81,7 +82,7 @@ img {
 /* CONTAINER */
 .container {
   width: 100%;
-  max-width: 14400px;
+  max-width: 1440px;
   padding-left: 20px;
   padding-right: 20px;
   margin-left: auto;
@@ -134,9 +135,11 @@ img {
 /* MAIN-CONTENT */
 .main-content {
   flex-grow: 1;
+  padding-top: 20px;
+  padding-bottom: 50px;
 }
 
-/* SITE HEADER HERO WRAPPER */
+/* SITE-HEADER-HERO-WRAPPER */
 .site-header-hero-wrapper {
   background-color: var(--light-brown);
   background-image: url(../img/site-header-bg.jpg);
@@ -258,6 +261,77 @@ img {
   height: 696px;
 }
 
+
+/* OUR-COLLECTION */
+.our-collection-inner {
+  padding: 50px 143px;
+  background-color: var(--light-bg);
+  background-image: url(../img/our-collection-bg.jpg);
+}
+
+.our-collection-heading {
+  color: #000;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 80px;
+}
+
+.our-collection-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.our-collection-item {
+  display: flex;
+  align-items: center;
+}
+
+.our-collection-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.our-collection-img {
+  flex-shrink: 0;
+  width: 450px;
+  height: 375px;
+  object-fit: cover;
+}
+
+.our-collection-info {
+  flex-grow: 1;
+  padding-left: 117px;
+  padding-right: 117px;
+}
+
+.our-collection-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: var(--text-color);
+  font-size: 48px;
+  line-height: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.our-collection-text {
+  margin: 0;
+  color: var(--text-color);
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 34px;
+}
+
+.our-collection-text:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+
+/* RETINA-BG */
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (   min--moz-device-pixel-ratio: 2),
@@ -267,5 +341,9 @@ only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
   .site-header-hero-wrapper {
     background-image: url(../img/site-header-bg@2x.jpg);
+  }
+
+  .our-collection-inner {
+    background-image: url(../img/our-collection-bg@2x.jpg);
   }
 }
