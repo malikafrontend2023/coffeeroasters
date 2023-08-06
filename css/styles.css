@@ -103,6 +103,7 @@ img {
   white-space: nowrap;
   text-align: center;
   letter-spacing: 1px;
+  overflow-x: hidden;
 }
 
 
@@ -256,7 +257,19 @@ img {
   margin-bottom: 34px;
 }
 
+.hero-img-wrapper {
+  position: relative;
+}
+
+.hero-badge {
+  position: absolute;
+  left: -91px;
+  top: -81px;
+  transform: rotate(-25deg);
+}
+
 .hero-img {
+  display: block;
   width: 710px;
   height: 696px;
   object-fit: cover;
@@ -273,6 +286,7 @@ img {
 }
 
 .our-collection-inner {
+  position: relative;
   padding: 50px 143px;
   background-color: var(--light-bg);
   background-image: url(../img/our-collection-bg.jpg);
@@ -339,6 +353,25 @@ img {
   margin-bottom: 10px;
 }
 
+.index-collection-leaves-left {
+  position: absolute;
+  top: 50px;
+  left: -178px;
+  /* transform: rotate(-22deg); */
+}
+
+.index-collection-leaves-right {
+  position: absolute;
+  top: 685px;
+  right: -328px;
+}
+
+.index-collection-leaves-left-light {
+  position: absolute;
+  bottom: 170px;
+  left: -216px;
+}
+
 /* INDEX-FEATURES */
 .index-features {
   margin-bottom: 30px;
@@ -372,6 +405,7 @@ img {
 }
 
 .index-features-list {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   margin: 0;
@@ -406,8 +440,15 @@ img {
   font-size: 18px;
 }
 
+.first-coffee {
+  position: absolute;
+  top: -50px;
+  left: -50px;
+}
+
 /* HOW-IT-WORKS */
 .how-it-works-inner {
+  position: relative;
   padding: 50px 30px;
   background-color: var(--accent-color-green);
   background-image: url(../img/how-it-works-bg.jpg);
@@ -436,6 +477,7 @@ img {
 }
 
 .how-it-works-item {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: calc(100% / 3 - 20px);
@@ -444,6 +486,8 @@ img {
 }
 
 .how-it-works-item::before {
+  position: relative;
+  z-index: 1;
   width: 60px;
   height: 60px;
   background-color: var(--light-bg);
@@ -451,6 +495,18 @@ img {
   content: "";
   margin-bottom: 20px;
 }
+
+.how-it-works-item:not(:last-child):after {
+  position: absolute;
+  left: 35px;
+  top: 30px;
+  width: 433px;
+  height: 3px;
+  content: "";
+  background-image: url(../img/brown-dashed-stroke.svg);
+  background-repeat: no-repeat;
+}
+
 
 .how-it-works-info {
   display: flex;
@@ -485,6 +541,12 @@ img {
 
 .how-it-works-cta:focus {
   outline-color: var(--accent-color-light-brown);
+}
+
+.coffee-rek {
+  position: absolute;
+  right: 80px;
+  top: 60px;
 }
 
 
